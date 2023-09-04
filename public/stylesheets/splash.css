@@ -1,0 +1,128 @@
+@import "style.css";
+@import "game.css";
+
+/*Set up the main body of the page, sets up grid, puts everything in the foreground*/
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--background);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/*Puts group number on the page, css requirements*/
+.topleft::before {
+    content: "CSE2";
+}
+
+.bottomleft::after {
+    content: "25";
+}
+
+/*Puts the background in the background and create the grid for the background tokens*/
+.background {
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100%;
+    width: 100%;
+    position:absolute;
+}
+
+/*Define top left box with a curved corner*/
+.topleft {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: var(--statistics);
+    border-bottom-right-radius: 30%;
+    text-align: center;
+}
+
+
+/*Define the bottom left box with a curved corner*/
+.bottomleft {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: var(--statistics);
+    border-top-right-radius: 30%;
+    text-align: center;
+}
+
+/*Define the bottom right box with a curved corner*/
+.bottomright {
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: var(--statistics);
+    border-top-left-radius: 30%;
+    text-align: left;
+}
+
+/*Define info about the button*/
+.button {
+    background-color: var(--buttonfill);
+    border-color: var(--buttonedge);
+    border-width: 5px;
+    border-radius: 15%;
+    width: 80%;
+    height: 100px;
+    position: relative;
+    left: 10%;
+    top: 50px;
+    font-size: xx-large;
+    color: var(--buttontext);
+}
+
+/*Make button change when hovered over, css requirement*/
+.button:hover {
+    color: white;
+    border-color: var(--buttonfill);
+    background-color: var(--buttonedge);
+}
+
+/*Title text style*/
+.title {
+    color: white;
+    font-size: 80px;
+}
+
+/*Was used for planned animation, did not work*/
+.edge:active {
+    animation: slide 3s linear infinite;
+}
+
+/*Description text style*/
+.description {
+    color: var(--stattext);
+    font-size: large;
+}
+
+/*Move the how to play to the right spot*/
+#steps {
+    text-align: left;
+    bottom: 50px;
+    position: relative;
+}
+
+/*Makes the titles animate when clicked on*/
+.title:active {
+    animation: scale 2s 
+}
+
+/*Defines the style of the game statistics*/
+.stats {
+    position: relative;
+    left: 10%;
+    top: 100px;
+}
+
+/*Go big then small*/
+@keyframes scale {
+    50% {
+        transform: scale(2);
+    }
+}
+

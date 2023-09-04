@@ -1,0 +1,162 @@
+@import "style.css";
+
+/*Background color set and remove scrollbars*/
+body {
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+/*Place board on the screen in correct area on page grid and create grid for tokens*/
+.board {
+  grid-area: 1 / 1 / 3 / 2; 
+  background-color: var(--board);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr) ;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 2.5%;
+  padding-left: 1%;
+  width: 100%;
+  height: 85.71%;
+}
+
+/*Show different color when clicking on a token*/
+.token:active {
+  background-color: var(--statistics);
+}
+
+/*Style for an empty token slot on the board*/
+.token {
+  background-color: var(--background);
+  align-self: center;
+  border-radius: 50%;
+  height: 90%;
+  width: 90%;
+}
+
+/*Style for the player one tokens*/
+.playerOne {
+  background-color: var(--playerOneFill);
+  border-color: var(--playerOneEdge);
+  align-self: center;
+  border-radius: 50%;
+  height: 85%;
+  width: 85%;
+  border-width: thick;
+  border-style: solid;
+}
+
+/*Change color to be the same when hovered over*/
+.playerOne:hover {
+  background-color: var(--playerOneEdge);
+}
+
+/*Style for player two token*/
+.playerTwo {
+  background-color: var(--playerTwoFill);
+  border-color: var(--playerTwoEdge);
+  align-self: center;
+  border-radius: 50%;
+  height: 85%;
+  width: 85%;
+  border-width: thick;
+  border-style: solid;
+}
+
+/*Change color to be the same when hoverd over*/
+.playerTwo:hover {
+  background-color: var(--playerTwoEdge);
+}
+
+/*Set up grid for the page as a whole, placing the board, stats and andy in the right spots*/
+.page {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 4fr 1fr;
+  column-gap: 2.5%;
+  row-gap: 2.5%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/*Put stats in the right part of the page and set up a grid for the placement of game info*/
+.statistics {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+  background-color: var(--statistics);
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+
+/*Set text color of the stats*/
+.stats {
+  color: var(--stattext);
+}
+
+/*Place the timer at the right spot*/
+.time {
+  grid-row: 1 2;
+  align-self: center;
+  padding-left: 2.5%;
+}
+
+/*Place the tokens played at the right spot*/
+.played {
+  grid-row: 2 3;
+  align-self: center;
+  padding-left: 2.5%;
+}
+
+/*Place the current turn at the right spot*/
+.turn {
+  grid-row: 3 4;
+  align-self: stretch;
+  align-content: center;
+  padding-left: 2.5%;
+}
+
+/*Resize the player token for current turn*/
+#player {
+  width: 70%;
+  height: 70%;
+}
+
+/*Large text for when the player needs to be let known something, such as waiting for a player or a game won*/
+.win {
+  font-weight: bold;
+  font-size: 100px;
+  position:absolute;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  color: black;
+}
+
+/*Creates andy circle*/
+.corner {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-image: url("../images/andy.jfif");
+  border-radius: 50%;
+  animation: rotate 10s linear infinite
+}
+
+/*Hi Andy, used for css requirements*/
+.corner::before {
+  content: "Hi ";
+}
+
+.corner::after {
+  content: "Andy!";
+}
+
+/*Animation for andy to spin a whole circle*/
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

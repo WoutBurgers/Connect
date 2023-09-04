@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\public",
+    "\\public\\images",
+    "\\public\\javascripts",
+    "\\public\\stylesheets",
+    "\\routes",
+    "\\views"
+  ],
+  "SelectedNode": "\\views\\splash.ejs",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Set up document-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In A Row!</title>
+    <link rel="stylesheet" href="stylesheets/game.css">
+</head>
+<body>
+    <main class="page">
+        <!--Create a board with 42 token pieces, with class names and data attributes to tell where they are-->
+        <div id="board" class="board">
+            <div class="token colone rowone" data-column=1 data-row=1></div>
+            <div class="token coltwo rowone" data-column=2 data-row=1></div>
+            <div class="token colthr rowone" data-column=3 data-row=1></div>
+            <div class="token colfou rowone" data-column=4 data-row=1></div>
+            <div class="token colfiv rowone" data-column=5 data-row=1></div>
+            <div class="token colsix rowone" data-column=6 data-row=1></div>
+            <div class="token colsev rowone" data-column=7 data-row=1></div>
+            <div class="token colone rowtwo" data-column=1 data-row=2></div>
+            <div class="token coltwo rowtwo" data-column=2 data-row=2></div>
+            <div class="token colthr rowtwo" data-column=3 data-row=2></div>
+            <div class="token colfou rowtwo" data-column=4 data-row=2></div>
+            <div class="token colfiv rowtwo" data-column=5 data-row=2></div>
+            <div class="token colsix rowtwo" data-column=6 data-row=2></div>
+            <div class="token colsev rowtwo" data-column=7 data-row=2></div>
+            <div class="token colone rowthr" data-column=1 data-row=3></div>
+            <div class="token coltwo rowthr" data-column=2 data-row=3></div>
+            <div class="token colthr rowthr" data-column=3 data-row=3></div>
+            <div class="token colfou rowthr" data-column=4 data-row=3></div>
+            <div class="token colfiv rowthr" data-column=5 data-row=3></div>
+            <div class="token colsix rowthr" data-column=6 data-row=3></div>
+            <div class="token colsev rowthr" data-column=7 data-row=3></div>
+            <div class="token colone rowfou" data-column=1 data-row=4></div>
+            <div class="token coltwo rowfou" data-column=2 data-row=4></div>
+            <div class="token colthr rowfou" data-column=3 data-row=4></div>
+            <div class="token colfou rowfou" data-column=4 data-row=4></div>
+            <div class="token colfiv rowfou" data-column=5 data-row=4></div>
+            <div class="token colsix rowfou" data-column=6 data-row=4></div>
+            <div class="token colsev rowfou" data-column=7 data-row=4></div>
+            <div class="token colone rowfiv" data-column=1 data-row=5></div>
+            <div class="token coltwo rowfiv" data-column=2 data-row=5></div>
+            <div class="token colthr rowfiv" data-column=3 data-row=5></div>
+            <div class="token colfou rowfiv" data-column=4 data-row=5></div>
+            <div class="token colfiv rowfiv" data-column=5 data-row=5></div>
+            <div class="token colsix rowfiv" data-column=6 data-row=5></div>
+            <div class="token colsev rowfiv" data-column=7 data-row=5></div>
+            <div class="token colone rowsix" data-column=1 data-row=6></div>
+            <div class="token coltwo rowsix" data-column=2 data-row=6></div>
+            <div class="token colthr rowsix" data-column=3 data-row=6></div>
+            <div class="token colfou rowsix" data-column=4 data-row=6></div>
+            <div class="token colfiv rowsix" data-column=5 data-row=6></div>
+            <div class="token colsix rowsix" data-column=6 data-row=6></div>
+            <div class="token colsev rowsix" data-column=7 data-row=6></div>
+            <h1 id="center" class="win">Waiting for another player</h1>
+        </div>
+        <!--Statistics section on the side, uses span to update the values-->
+        <div class="statistics">
+            <div class="stats time">Time Elapsed:
+                <span id="time" class="stats">00:00</span>
+            </div>
+            <div class="stats played">Pieces Played:
+                <span id="pieces" class="stats played">0</span>
+            </div>
+            <div class="stats turn">Player Turn: 
+                <span id="turn" class="stats">One</span>
+                <div id="player" class="stats playerOne"></div>
+            </div>
+        </div>
+        <!--Spinning andy in the corner for css requirements-->
+        <div class="corner"></div>
+    </main>
+    <!--Code to be run-->
+    <script src="javascripts/client.js"></script>
+    <script src="javascripts/messages.js"></script>
+</body>
+</html>

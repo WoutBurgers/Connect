@@ -1,0 +1,32 @@
+/*Set up colors for use across application*/
+:root {
+    --background: #6bbde5;
+    --board: yellow;
+    --playerOneFill: #e298cf;
+    --playerOneEdge: #d56ebb;
+    --playerTwoFill: #99a9e1;
+    --playerTwoEdge: #6e88d5;
+    --statistics: #aae5d6;
+    --stattext: #3226b2;
+    --buttonfill: #d5886e;
+    --buttonedge: #b84e2a;
+    --buttontext: #923b1e;
+}
+
+/*Tell the user that the screen isn't big enough*/
+@media (max-width: 250px), (max-height: 250px) {
+    body::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        color: greenyellow;
+        padding: 20px;
+        content: "Your window is too small (at least 1366x768px is expected) to play this game. Enlarge the browser window or zoom out to play or disable the CSS @media query.";
+        background-color: black;
+        z-index: 100;
+    }
+}

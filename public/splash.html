@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Set up the document-->
+    <!--Copied into ejs but with scriplet functionality-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/splash.css">
+    <title>In A Row!</title>
+</head>
+<body>
+    <!--Background tokens-->
+    <main id="background" class="background">
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+        <div class="token playerTwo"></div>
+        <div class="token playerOne"></div>
+    </main>
+    <!--Title and tag line in the top left-->
+    <section class="topleft">
+        <h1 id="title" class="title">In A Row!</h1>
+        <h2 id="info" class="description">A simple strategy game for 2 people</h2>
+    </section>
+    <!--How to play in the bottom left-->
+    <section class="bottomleft">
+        <h1 id="how" class="title">How to Play</h1>
+        <ol id="steps" class="description">
+            <li>Place a token in an open column!</li>
+            <li>Stack tokens up!</li>
+            <li>Try to get four in a row!</li>
+        </ol>
+    </section>
+    <!--Play button and statistics in the bottom right, refer to ejs for the scriptlet updates-->
+    <section class="bottomright">
+        <form action="/play" method="get">
+            <button type="submit" class="button">PLAY</button>
+          </form>
+        <div id="played" class="stats description">Games Played:
+            <span id="games" class="description">0</span>
+        </div>
+        <div id="placed" class="stats description">Tokens Placed:
+            <span id="tokens" class="description">0</span>
+        </div>
+        <div id="first" class="stats description">Games Won By First:
+            <span id="won" class="description">0</span>
+        </div>
+    </section>
+</body>
+</html>
